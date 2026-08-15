@@ -1,6 +1,7 @@
 package stopwatch;
 
 public class StopWatch {
+    int hours;
     int minutes;
     public void record(int minutes) {
         if (minutes >= 0) {

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class StopWatchTest {
 
     @Test
-    void test1() {
+    void recordWhenMinutesIsPositiveThenMinutesAreSet() {
         StopWatch stopWatch = new StopWatch();
         stopWatch.record(14);
         int minutes = stopWatch.getMinutes();
@@ -14,7 +14,7 @@ public class StopWatchTest {
     }
 
     @Test
-    void test2() {
+    void recordWhenMinutesIsNegativeThenNoChange() {
         StopWatch stopWatch = new StopWatch();
         stopWatch.record(-5);
         int minutes = stopWatch.getMinutes();
