@@ -37,4 +37,13 @@ public class StopWatchTest {
         Assertions.assertEquals(1, days);
     }
 
+    @Test
+    void recordWhenHoursInDayNot24ThenDayIncrease() {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.setHoursInDay(8);
+        stopWatch.record(60 * 9);
+        int days = stopWatch.getDays();
+        Assertions.assertEquals(1, days);
+    }
+
 }
