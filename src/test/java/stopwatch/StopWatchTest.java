@@ -29,4 +29,12 @@ public class StopWatchTest {
         Assertions.assertEquals(1, hours);
     }
 
+    @Test
+    void recordWhenHoursExceed24ThenDaysIncrease() {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.record(60 * 25);
+        int days = stopWatch.getDays();
+        Assertions.assertEquals(1, days);
+    }
+
 }
