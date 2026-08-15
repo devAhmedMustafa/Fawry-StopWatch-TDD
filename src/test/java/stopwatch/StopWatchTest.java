@@ -21,4 +21,12 @@ public class StopWatchTest {
         Assertions.assertEquals(0, minutes);
     }
 
+    @Test
+    void recordWhenMinutesExceed60ThenHoursIncrease() {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.record(61);
+        int hours = stopWatch.getHours();
+        Assertions.assertEquals(1, hours);
+    }
+
 }
